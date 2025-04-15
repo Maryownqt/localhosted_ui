@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "description": "SignSpeak - a web-based sign language translator using React and Firebase",
+  "engines": {
+    "node": "20"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
