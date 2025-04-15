@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import FirstPage from './ui/firstpage/firstpage/FirstPage';
+import SecondPage from './ui/firstpage/secondpage/SecondPage';
+import ThirdPage from './ui/firstpage/thirdpage/ThirdPage';
+import About from './ui/firstpage/about/about';
+import SignList from './ui/firstpage/signlist/SignList';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<FirstPage />} />
+        <Route path="/second" element={<SecondPage />} />
+        <Route path="/third" element={<ThirdPage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/signlist" element={<SignList />} />
+      </Routes>
+    </Router>
   );
 }
 
