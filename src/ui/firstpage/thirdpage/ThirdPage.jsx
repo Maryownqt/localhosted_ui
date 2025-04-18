@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Webcam from "react-webcam";
 import CLASS_LABELS from "../../../utils/40_classes_labels.json";
 
+// Translation dictionary
 const TRANSLATIONS = {
   English: CLASS_LABELS,
   Filipino: {
@@ -57,7 +58,7 @@ function ThirdPage() {
   const [loading, setLoading] = useState(false);
   const [lastSpoken, setLastSpoken] = useState("");
 
-  // ✅ Your Ngrok tunnel endpoint
+  // ✅ Use your ngrok endpoint here
   const API_URL = "https://ea0b-136-158-122-209.ngrok-free.app/detect";
 
   const speakText = useCallback((text) => {
