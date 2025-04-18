@@ -56,7 +56,9 @@ function ThirdPage() {
   const [language, setLanguage] = useState(localStorage.getItem("lang") || "English");
   const [loading, setLoading] = useState(false);
   const [lastSpoken, setLastSpoken] = useState("");
-  const API_URL = "http://127.0.0.1:8000/detect";
+
+  // 🔗 Use deployed backend
+  const API_URL = "https://signspeak-nf5x.onrender.com/detect";
 
   const speakText = useCallback((text) => {
     if (!window.speechSynthesis || text === lastSpoken) return;
