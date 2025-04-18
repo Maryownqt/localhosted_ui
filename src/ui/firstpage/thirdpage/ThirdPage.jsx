@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Webcam from "react-webcam";
 import CLASS_LABELS from "../../../utils/40_classes_labels.json";
 
+// Translation mapping
 const TRANSLATIONS = {
   English: CLASS_LABELS,
   Filipino: {
@@ -57,8 +58,7 @@ function ThirdPage() {
   const [loading, setLoading] = useState(false);
   const [lastSpoken, setLastSpoken] = useState("");
 
-  // 🔗 Use deployed backend
-  const API_URL = "https://signspeak-nf5x.onrender.com/detect";
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const speakText = useCallback((text) => {
     if (!window.speechSynthesis || text === lastSpoken) return;
