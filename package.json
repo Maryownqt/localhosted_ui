@@ -2,12 +2,12 @@
   "name": "sign-speak",
   "version": "0.1.0",
   "private": true,
-  "description": "SignSpeak - a web-based sign language translator using React and Firebase",
+  "description": "SignSpeak - a web-based sign language translator using React",
   "engines": {
     "node": "20"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build",            // ✅ serve production build
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -18,6 +18,7 @@
     "react-router-dom": "^7.5.0",
     "react-scripts": "5.0.1",
     "react-webcam": "^7.2.0",
+    "serve": "^14.2.0",                  // ✅ added for static serving
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
@@ -27,17 +28,10 @@
     "@testing-library/user-event": "^13.5.0"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.2%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
