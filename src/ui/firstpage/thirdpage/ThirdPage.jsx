@@ -58,7 +58,7 @@ function ThirdPage() {
   const [lastSpoken, setLastSpoken] = useState("");
 
   // ✅ Your Ngrok tunnel endpoint
-  const API_URL = "https://9e34-136-158-122-209.ngrok-free.app/detect";
+  const API_URL = "https://ea0b-136-158-122-209.ngrok-free.app/detect";
 
   const speakText = useCallback((text) => {
     if (!window.speechSynthesis || text === lastSpoken) return;
