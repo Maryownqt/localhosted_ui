@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import Webcam from "react-webcam";
 import CLASS_LABELS from "../../../utils/40_classes_labels.json";
 
-// Translation mapping
 const TRANSLATIONS = {
   English: CLASS_LABELS,
   Filipino: {
@@ -57,8 +56,7 @@ function ThirdPage() {
   const [language, setLanguage] = useState(localStorage.getItem("lang") || "English");
   const [loading, setLoading] = useState(false);
   const [lastSpoken, setLastSpoken] = useState("");
-
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = "http://127.0.0.1:8000/detect";
 
   const speakText = useCallback((text) => {
     if (!window.speechSynthesis || text === lastSpoken) return;
