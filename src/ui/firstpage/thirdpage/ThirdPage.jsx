@@ -59,7 +59,7 @@ function ThirdPage() {
   const [lastSpoken, setLastSpoken] = useState("");
 
   // ✅ Use your ngrok endpoint here
-  const API_URL = "https://a6a3-182-255-40-170.ngrok-free.app/detect";
+  const API_URL = "https://19f4-182-255-40-170.ngrok-free.app/detect";
 
   const speakText = useCallback((text) => {
     if (!window.speechSynthesis || text === lastSpoken) return;
