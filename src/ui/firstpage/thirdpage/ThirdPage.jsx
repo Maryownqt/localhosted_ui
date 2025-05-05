@@ -58,8 +58,7 @@ function ThirdPage() {
   const [loading, setLoading] = useState(false);
   const [lastSpoken, setLastSpoken] = useState("");
 
-  // ✅ Use your ngrok endpoint here
-  const API_URL = "https://a5f7-182-255-40-170.ngrok-free.app/detect";
+  const API_URL = "https://96ed-182-255-40-170.ngrok-free.app/detect";
 
   const speakText = useCallback((text) => {
     if (!window.speechSynthesis || text === lastSpoken) return;
@@ -107,7 +106,7 @@ function ThirdPage() {
   }, [language, speakText]);
 
   useEffect(() => {
-    const interval = setInterval(captureFrame, 1500);
+    const interval = setInterval(captureFrame, 800); // ⬇️ Faster prediction interval
     return () => clearInterval(interval);
   }, [captureFrame]);
 
