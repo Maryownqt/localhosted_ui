@@ -3,7 +3,7 @@ import SecondPage from './ui/firstpage/secondpage/SecondPage';
 import ThirdPage from './ui/firstpage/thirdpage/ThirdPage';
 import About from './ui/firstpage/about/about';
 import SignList from './ui/firstpage/signlist/SignList';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
