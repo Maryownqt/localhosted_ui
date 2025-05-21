@@ -89,10 +89,11 @@ const NO_GESTURE_TEXT = {
   English: "No gesture detected",
   Filipino: "Walang kilos na nadetect"
 };
-const BASE_URL    = process.env.REACT_APP_API_URL;
+const BASE_URL    = "http://localhost:10000";
 const RESET_URL   = `${BASE_URL}/reset_buffer`;
 const API_URL     = `${BASE_URL}/detect`;
 const METRICS_URL = `${BASE_URL}/metrics`;
+
 
 export default function ThirdPage() {
   const navigate = useNavigate();
